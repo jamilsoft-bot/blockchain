@@ -1,0 +1,414 @@
+/* *
+* Template Name: CoinbaseClone
+* Template URL: https://globalgeniusera.com/coinbase + clone/
+* Author: globalgeniusera.com
+* License: https://globalgeniusera.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root {
+  scroll-behavior: smooth;
+  --color: #5990c3;
+  --border-radius: 32px;
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00f;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 1000;
+  padding: 8px 0;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.header .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00f;
+  font-family: sans-serif;
+}
+
+.header .navbar ul{
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link-area {
+  list-style-type: none;
+  color: #000;
+  font-family: sans-serif;
+}
+
+.nav-link-area
+.nav-link {
+  font-weight: bold;
+  transform: 1.5s;
+}
+
+.nav-link-area
+.nav-link:hover {
+  color: #2a1f9f;
+}
+
+.bi-globe {
+  padding-left: 18px;
+}
+
+.nav-link-area .signin {
+  padding: 8px 16px;
+  outline: transparent;
+  border: transparent;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
+}
+
+.nav-link-area 
+.getstarted   {
+  background-color: #00f;
+  padding: 8px 16px;
+  border-radius: 32px;
+  color: #fff;
+}
+
+.mobile-nav-toggle {
+  font-size: 20px;
+  display: none;
+}
+
+.mobile-nav-toggle:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-link-area .nav-link {
+    display: none;
+    margin: 0 16px;
+  }
+  .nav-link-area .getstarted,
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav-link-area .getstarted {
+    display: none;
+  }
+}
+
+/*        Hero        */
+
+.hero {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero .container .row {
+  display: flex;
+  gap: 50px;
+  margin-top: 16.66%;
+}
+
+/* .col-lg-6:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+.col-lg-6 {
+  width: 50%;
+}
+
+.row .col-lg-6 
+.hero-header a, 
+.hero-header i:not(:first-child){
+  color: #00f;
+  font-weight: bold;
+}
+
+.hero-header 
+.bi-currency-bitcoin  {
+  background: #00f;
+  color: #fff;
+  padding: 4px;
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+
+.col-lg-6:first-child h1 {
+  max-width: 300px;
+  font-size: 50px;
+}
+
+.hero form{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.form-container input[type="email"] {
+  padding: 16px;
+  width: 66.77%;
+  border: 1px solid #d3c6c6ae;
+  border-radius: 6px;
+}
+
+.form-container input[type="email"]:focus {
+  outline: transparent;
+  border: 1px solid #d3c6c6ae;
+}
+
+.form-container input[type="button"] {
+  padding: 16px;
+  background: #00f;
+  width: calc(100% - 66.77%);
+  outline: none;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-container input[type="button"]:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column-reverse;
+    gap: 20px;
+    margin: 33.33% 8px 8.88% 8px;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+  }
+
+  .col-lg-6:first-child h1 {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .form-container input[type="email"] {
+    width: 66.66%;
+  }
+
+  .form-container input[type="button"] {
+    width: 33.33%;
+  }
+  .img-fluid {
+    display: none;
+  }
+}
+
+/*     black-line      */
+
+.black-line {
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.black-line .row {
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.row .col-3 {
+  font-size: 128px;
+  color: #fff;
+}
+
+.row .col-9 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .col-9 h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.black-line .col-9 button {
+  width: 33.33%;
+  outline: none;
+  border: 0;
+  padding: 12px 24px;
+  background: #00f;
+  border-radius: 32px;
+  color: #fff;
+}
+
+.black-line .col-9 button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .black-line .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .black-line .col-9 button {
+    width: 100%;
+  } 
+}
+
+/*       Table       */
+
+.table-area {
+  width: 100%;
+}
+
+.table-area .table {
+  width: 80vw;
+  margin: 64px auto;
+  border: 1px solid #3833333e; 
+  border-collapse: collapse; 
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.table th:first-child, .table td:first-child {
+  width: 5vw;
+  text-align: center;
+}
+
+.table tr td, .table tr th {
+  border-bottom: 1px solid #3833333e;
+  padding: 16px 0;
+}
+
+.table .name {
+  width: 35vw;
+}
+
+.table .price {
+  width: 20vw;
+}
+
+.table .change, .table .chart {
+  width: 7vw;
+}
+
+.table .buy button {
+  outline: transparent;
+  border: transparent;
+  text-align: center;
+  background: #008000;
+  border-radius: 6px;
+  color: #fff;
+  padding: 4px 16px;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* mid-section-container */
+
+.mid-section-container {
+  width: 100%;
+  color: #000;
+}
+
+.mid-section-container .row {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mid-section-container
+.row .col-6           {
+  width: 50%;
+}
+
+.mid-section-container
+.row .col-6:first-child {
+  max-width: 25em;
+}
+
+.mid-section-container .row .col-6:first-child
+h2, .mid-section-container .row .col-6:first-child p  {
+  font-weight: bold;
+}
+
+.mid-section-container .row 
+.col-6:first-child button  {
+  background: #00f;
+  color: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
